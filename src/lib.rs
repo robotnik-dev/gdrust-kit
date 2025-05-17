@@ -19,10 +19,10 @@ gdrust-kit = { version = "0.1", features = ["collision"] }
 */
 
 #[cfg(feature = "pathfinding")]
-pub use gdrust::pathfinding;
+pub use gdrust_pathfinding as pathfinding;
 
 #[cfg(feature = "collision")]
-pub use gdrust::collision;
+pub use gdrust_collision as collision;
 
 /// Version information for the meta package
 pub mod version {

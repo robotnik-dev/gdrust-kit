@@ -1,5 +1,5 @@
 [package]
-name = "gdrust-kit"
+name = "gdrust_kit"
 version = "0.1.0"
 edition = "2021"
 description = "A collection of tools for Rust Godot development"
@@ -16,14 +16,14 @@ members = [
 resolver = "2"
 
 [dependencies]
-gdrust-pathfinding = { path = "crates/gdrust-pathfinding", version = "0.1", optional = true }
-gdrust-collision = { path = "crates/gdrust-collision", version = "0.1", optional = true }
+gdrust_pathfinding = { path = "crates/gdrust_pathfinding", version = "0.1", optional = true }
+gdrust_collision = { path = "crates/gdrust_collision", version = "0.1", optional = true }
 
 [features]
 default = []
 
-pathfinding = ["gdrust-pathfinding"]
-collision = ["gdrust-collision"]
+pathfinding = ["gdrust_pathfinding"]
+collision = ["gdrust_collision"]
 
 all = ["pathfinding", "collision"]
 

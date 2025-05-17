@@ -3,17 +3,17 @@
 version = 4
 
 [[package]]
-name = "gdrust-collision"
+name = "gdrust_collision"
 version = "0.1.0"
 
 [[package]]
-name = "gdrust-kit"
+name = "gdrust_kit"
 version = "0.1.0"
 dependencies = [
- "gdrust-collision",
- "gdrust-pathfinding",
+ "gdrust_collision",
+ "gdrust_pathfinding",
 ]
 
 [[package]]
-name = "gdrust-pathfinding"
+name = "gdrust_pathfinding"
 version = "0.1.0"

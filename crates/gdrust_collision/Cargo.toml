@@ -1,5 +1,5 @@
 [package]
-name = "gdrust-collision"
+name = "gdrust_collision"
 version = "0.1.0"
 edition = "2021"
 description = "Tools for collision detection and physics for Rust Godot development"
