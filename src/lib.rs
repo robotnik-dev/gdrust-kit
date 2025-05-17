@@ -1,5 +1,5 @@
 /*!
-# gdrust-kit
+# gdrust_kit
 
 A collection of helpful tools for Rust Godot development.
 
@@ -14,7 +14,7 @@ Each tool can be enabled with its own feature flag:
 
 ```toml
 [dependencies]
-gdrust-kit = { version = "0.1", features = ["collision"] }
+gdrust_kit = { version = "0.1", features = ["collision"] }
 ```
 */
 

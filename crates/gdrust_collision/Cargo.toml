@@ -4,7 +4,7 @@ version = "0.1.0"
 edition = "2021"
 description = "Tools for collision detection and physics for Rust Godot development"
 license = "MIT"
-repository = "https://github.com/robotnik-dev/gdrust-kit"
+repository = "https://github.com/robotnik-dev/gdrust_kit"
 authors = ["Robotnik <robotnik.games@gmail.com>"]
 readme = "README.md"
 
