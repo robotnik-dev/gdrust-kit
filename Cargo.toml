@@ -1,0 +1,30 @@
+[package]
+name = "gdrust-kit"
+version = "0.1.0"
+edition = "2021"
+description = "A collection of tools for Rust Godot development"
+license = "MIT"
+repository = "https://github.com/robotnik-dev/gdrust-kit"
+authors = ["Robotnik <robotnik.games@gmail.com>"]
+readme = "README.md"
+
+[workspace]
+members = [
+    ".",
+    "crates/*"
+]
+resolver = "2"
+
+[dependencies]
+gdrust-pathfinding = { path = "crates/gdrust-pathfinding", version = "0.1", optional = true }
+gdrust-collision = { path = "crates/gdrust-collision", version = "0.1", optional = true }
+
+[features]
+default = []
+
+pathfinding = ["gdrust-pathfinding"]
+collision = ["gdrust-collision"]
+
+all = ["pathfinding", "collision"]
+
+dev = ["all"]
