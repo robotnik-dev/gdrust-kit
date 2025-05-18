@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## v0.1.0 (2025-05-18)
 
+<csr-id-303760ca5d73dfccc98e068fe6f9189c1d49f657/>
+
 ### Bug Fixes
 
  - <csr-id-9e20de2feb8e733f04499d77f6b40cddc5faaece/> update repository URLs to use consistent naming convention
