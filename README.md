@@ -15,19 +15,19 @@ Each tool can be enabled with its own feature flag:
 
 ```toml
 [dependencies]
-gdrust_kit = { version = "0.1" } # this compiles nothing
+gdrust_kit = { version = "0.1.0" } # this compiles nothing
 ```
 
 ### Using all tools
 
 ```toml
 [dependencies]
-gdrust_kit = { version = "0.1", features = ["all"] }
+gdrust_kit = { version = "0.1.0", features = ["all"] }
 ```
 
 ### Using just a single tool
 
 ```toml
 [dependencies]
-gdrust_kit = { version = "0.1", features = ["collision"] }
+gdrust_kit = { version = "0.1.0", features = ["collision"] }
 ```
