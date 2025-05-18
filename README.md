@@ -1,33 +1,35 @@
 # gdrust_kit
 
-A collection of helpful tools for Rust Godot development.
+[![Crates.io](https://img.shields.io/crates/v/gdrust_kit)](https://crates.io/crates/gdrust_kit)
+[![MIT/Apache 2.0](https://img.shields.io/badge/license-MIT%2FApache-blue.svg)](LICENSE)
+[![Docs](https://docs.rs/gdrust_kit/badge.svg)](https://docs.rs/gdrust_kit)
 
-## Available Tools
+A toolkit of Rust utilities for Godot game development.
 
-Each tool can be enabled with its own feature flag:
+## Tools
 
-- `pathfinding`: Tools for pathfinding algorithms
-- `collision`: Tools for collision detection and physics
+- `collision`: Collision tools
+- `pathfinding`: Pathfinding tools
 
 ## Usage
 
-### Per default no tool is compiled, you have to choose the feature
-
 ```toml
-[dependencies]
-gdrust_kit = { version = "0.1.0" } # this compiles nothing
-```
+# Use specific tools
+gdrust_kit = { version = "0.1.0", features = ["collision", "pathfinding"] }
 
-### Using all tools
-
-```toml
-[dependencies]
+# Use all tools
 gdrust_kit = { version = "0.1.0", features = ["all"] }
+
+# Or use individual crates directly
+gdrust_collision = "0.1.0"
 ```
 
-### Using just a single tool
+```rust
+// Import and use tools
+use gdrust_kit::{collision, pathfinding};
 
-```toml
-[dependencies]
-gdrust_kit = { version = "0.1.0", features = ["collision"] }
+// Create a collision object
+// TODO: example here
 ```
+
+## [Documentation](https://docs.rs/gdrust_kit) | [GitHub](https://github.com/robotnik-dev/gdrust_kit)
