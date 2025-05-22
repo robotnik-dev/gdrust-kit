@@ -3,9 +3,12 @@ name = "gdrust_collision"
 version = "0.1.0"
 edition = "2021"
 description = "Collision tools for Rust Godot development"
-license = "MIT OR Apache-2.0"
+license = "MIT"
 repository = "https://github.com/robotnik-dev/gdrust_kit"
 authors = ["Robotnik <robotnik.games@gmail.com>"]
 readme = "README.md"
 
-[dependencies]
+[dependencies.godot]
+git = "https://github.com/godot-rust/gdext"
+branch = "master"
+features = ["experimental-wasm", "lazy-function-tables"]
