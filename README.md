@@ -1,7 +1,7 @@
 # gdrust_kit
 
 [![Crates.io](https://img.shields.io/crates/v/gdrust_kit)](https://crates.io/crates/gdrust_kit)
-[![MIT/Apache 2.0](https://img.shields.io/badge/license-MIT%2FApache-blue.svg)](LICENSE)
+[![MIT/Apache 2.0](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Docs](https://docs.rs/gdrust_kit/badge.svg)](https://docs.rs/gdrust_kit)
 
 A toolkit of Rust utilities for Godot game development.
