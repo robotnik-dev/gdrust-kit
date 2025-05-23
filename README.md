@@ -10,12 +10,13 @@ A toolkit of Rust utilities for Godot game development.
 
 - `collision`: Collision tools
 - `pathfinding`: Pathfinding tools
+- `player_controller`: Player input and controls
 
 ## Usage
 
 ```toml
 # Use specific tools
-gdrust_kit = { version = "0.1.0", features = ["collision", "pathfinding"] }
+gdrust_kit = { version = "0.1.0", features = ["collision"] }
 
 # Use all tools
 gdrust_kit = { version = "0.1.0", features = ["all"] }
@@ -26,10 +27,10 @@ gdrust_collision = "0.1.0"
 
 ```rust
 // Import and use tools
-use gdrust_kit::{collision, pathfinding};
+use gdrust_kit::collision;
 
 // Create a collision object
-// TODO: example here
+// TODO: WIP
 ```
 
 ## [Documentation](https://docs.rs/gdrust_kit) | [GitHub](https://github.com/robotnik-dev/gdrust_kit)

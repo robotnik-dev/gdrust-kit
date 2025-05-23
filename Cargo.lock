@@ -29,11 +29,19 @@ version = "0.1.0"
 dependencies = [
  "gdrust_collision",
  "gdrust_pathfinding",
+ "gdrust_player_controller",
 ]
 
 [[package]]
 name = "gdrust_pathfinding"
 version = "0.1.0"
+
+[[package]]
+name = "gdrust_player_controller"
+version = "0.1.0"
+dependencies = [
+ "godot",
+]
 
 [[package]]
 name = "glam"

@@ -9,6 +9,7 @@ Each tool can be enabled with its own feature flag:
 
 - `pathfinding`: Tools for pathfinding algorithms
 - `collision`: Tools for collision detection and physics
+- `player_controller`: Tools for managing player input and controls
 
 ## Usage
 
@@ -23,6 +24,9 @@ pub use gdrust_pathfinding as pathfinding;
 
 #[cfg(feature = "collision")]
 pub use gdrust_collision as collision;
+
+#[cfg(feature = "player_controller")]
+pub use gdrust_player_controller as player_controller;
 
 /// Version information for the meta package
 pub mod version {
@@ -41,6 +45,9 @@ pub mod version {
 
         #[cfg(feature = "collision")]
         tools.push("collision");
+
+        #[cfg(feature = "player_controller")]
+        tools.push("player_controller");
 
         tools
     }

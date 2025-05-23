@@ -18,13 +18,15 @@ resolver = "2"
 [dependencies]
 gdrust_pathfinding = { path = "crates/gdrust_pathfinding", version = "^0.1.0", optional = true }
 gdrust_collision = { path = "crates/gdrust_collision", version = "^0.1.0", optional = true }
+gdrust_player_controller = { path = "crates/gdrust_player_controller", version = "^0.1.0", optional = true }
 
 [features]
 default = []
 
 pathfinding = ["gdrust_pathfinding"]
 collision = ["gdrust_collision"]
+player_controller = ["gdrust_player_controller"]
 
-all = ["pathfinding", "collision"]
+all = ["pathfinding", "collision", "player_controller"]
 
 dev = ["all"]
