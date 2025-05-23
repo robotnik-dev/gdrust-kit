@@ -10,5 +10,6 @@ readme = "README.md"
 
 [dependencies.godot]
 git = "https://github.com/godot-rust/gdext"
+version = "0.2.4"
 branch = "master"
 features = ["experimental-wasm", "lazy-function-tables"]
