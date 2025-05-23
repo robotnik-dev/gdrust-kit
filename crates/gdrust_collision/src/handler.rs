@@ -1,37 +1,50 @@
+use std::collections::HashMap;
+
 use godot::{
-    classes::{Engine, Object},
-    global::godot_error,
-    init::InitLevel,
-    obj::NewAlloc,
+    classes::{INode, Node},
+    obj::WithBaseField,
     prelude::{godot_api, Base, GodotClass},
 };
 
+use crate::collider::Collider2D;
+
 #[derive(GodotClass)]
-#[class(init, base=Object)]
+#[class(tool, init, base=Node)]
 pub struct CollisionHandler {
-    base: Base<Object>,
+    collider: HashMap<i32, Collider2D>,
+    base: Base<Node>,
+}
+
+#[godot_api]
+impl INode for CollisionHandler {
+    fn enter_tree(&mut self) {
+        self.base_mut()
+            .add_to_group_ex("CollisionHandler")
+            .persistent(true)
+            .done();
+    }
+
+    fn physics_process(&mut self, delta: f64) {
+        // WIP collision checking
+    }
 }
 
 #[godot_api]
 impl CollisionHandler {
-    pub fn register(level: InitLevel) {
-        if level == InitLevel::Scene {
-            Engine::singleton()
-                .register_singleton("CollisionHandler", &CollisionHandler::new_alloc());
-        }
+    pub fn register_collider_2d(&mut self, collider2d: Collider2D) -> Result<i32, String> {
+        // do nothing when its already registered
+
+        // registering in hashmap, generating an ID
+
+        // connecting the exit tree signal to unregister the collider with the same ID
+        Ok(0)
     }
 
-    pub fn unregister(level: InitLevel) {
-        if level == InitLevel::Scene {
-            let mut engine = Engine::singleton();
-            let collision_handler = "CollisionHandler";
+    pub fn update_collider(id: i32, new_collider: Collider2D) -> Result<i32, String> {
+        Ok(0)
+    }
 
-            if let Some(singleton) = engine.get_singleton(collision_handler) {
-                engine.unregister_singleton(collision_handler);
-                singleton.free();
-            } else {
-                godot_error!("Failed to get singleton: {collision_handler}");
-            }
-        }
+    fn unregister_collider2d(id: i32) -> Result<i32, String> {
+        Ok(0)
     }
 }
