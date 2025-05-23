@@ -18,14 +18,14 @@ source = "git+https://github.com/godot-rust/godot4-prebuilt?branch=releases#0943
 
 [[package]]
 name = "gdrust_collision"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "godot",
 ]
 
 [[package]]
 name = "gdrust_kit"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "gdrust_collision",
  "gdrust_pathfinding",
@@ -34,7 +34,7 @@ dependencies = [
 
 [[package]]
 name = "gdrust_pathfinding"
-version = "0.1.0"
+version = "0.1.1"
 
 [[package]]
 name = "gdrust_player_controller"
