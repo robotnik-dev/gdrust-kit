@@ -7,14 +7,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## v0.1.1 (2025-05-23)
 
+### Chore
+
+ - <csr-id-cb34d2cb8694a1f2d663b52e9da4186d600be54a/> add CHANGELOG.md for gdrust_player_controller crate
+
 ### New Features
 
  - <csr-id-8c18fa3f484baf175b506a00ddea0d36d24959df/> update dependencies and improve documentation for gdrust_kit and gdrust_collision
    - Updated license to MIT for gdrust_kit, gdrust_collision, and gdrust_pathfinding.
-   - Added new dependencies and features in Cargo.lock.
-   - Enhanced documentation in gdrust_collision with usage examples and feature descriptions.
-   - Introduced Hitbox2D and Collider2D structs with methods for collision handling.
-   - Added CollisionHandler for managing collision detection in Godot.
+- Added new dependencies and features in Cargo.lock.
+- Enhanced documentation in gdrust_collision with usage examples and feature descriptions.
+- Introduced Hitbox2D and Collider2D structs with methods for collision handling.
+- Added CollisionHandler for managing collision detection in Godot.
 
 ### Bug Fixes
 
@@ -24,9 +28,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 <csr-read-only-do-not-edit/>
 
- - 2 commits contributed to the release.
+ - 4 commits contributed to the release.
  - 4 days passed between releases.
- - 2 commits were understood as [conventional](https://www.conventionalcommits.org).
+ - 3 commits were understood as [conventional](https://www.conventionalcommits.org).
  - 0 issues like '(#ID)' were seen in commit messages
 
 ### Commit Details
@@ -36,6 +40,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 <details><summary>view details</summary>
 
  * **Uncategorized**
+    - Add CHANGELOG.md for gdrust_player_controller crate ([`cb34d2c`](https://github.com/robotnik-dev/gdrust_kit/commit/cb34d2cb8694a1f2d663b52e9da4186d600be54a))
+    - Release gdrust_collision v0.1.1, gdrust_pathfinding v0.1.1, gdrust_player_controller v0.1.0, gdrust_kit v0.1.1 ([`1f1b905`](https://github.com/robotnik-dev/gdrust_kit/commit/1f1b9052e5129748013ef62c17acb9c7050786b4))
     - Update license badge formatting in README files for consistency ([`36cb651`](https://github.com/robotnik-dev/gdrust_kit/commit/36cb651842e1ca83bc164ce7545669e6f1cb3558))
     - Update dependencies and improve documentation for gdrust_kit and gdrust_collision ([`8c18fa3`](https://github.com/robotnik-dev/gdrust_kit/commit/8c18fa3f484baf175b506a00ddea0d36d24959df))
 </details>
