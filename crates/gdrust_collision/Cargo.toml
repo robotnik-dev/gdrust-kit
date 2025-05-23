@@ -8,8 +8,5 @@ repository = "https://github.com/robotnik-dev/gdrust_kit"
 authors = ["Robotnik <robotnik.games@gmail.com>"]
 readme = "README.md"
 
-[dependencies.godot]
-git = "https://github.com/godot-rust/gdext"
-version = "0.2.4"
-branch = "master"
-features = ["experimental-wasm", "lazy-function-tables"]
+[dependencies]
+godot = { version = "0.2.4" }
