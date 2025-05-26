@@ -1,7 +1,0 @@
-{
-    "github.copilot.chat.commitMessageGeneration.instructions": [
-        {
-            "text": "Use conventional commit message format. Keep the first line under 50 characters. Keep the second line empty.",
-        }
-    ],
-}
