@@ -1,6 +1,6 @@
 use godot::{
     builtin::{Color, Vector2},
-    classes::Texture2D,
+    classes::{Engine, Texture2D},
     global::{godot_error, godot_print},
     obj::{Gd, WithBaseField},
     prelude::{godot_api, Base, GodotClass, INode2D, Node2D},
@@ -8,7 +8,7 @@ use godot::{
 
 use crate::{
     collider::{Collider2D, CollisionInfo},
-    handler::CollisionHandler,
+    handler::{CollisionHandler, COLLISION_HANDLER_NODE},
 };
 
 #[derive(GodotClass)]
@@ -29,34 +29,15 @@ pub struct CollisionBox {
 
     collider2d: Collider2D,
 
+    registered_id: Option<i32>,
+
     base: Base<Node2D>,
 }
 
 #[godot_api]
 impl INode2D for CollisionBox {
     fn enter_tree(&mut self) {
-        if let Some(handler) = self
-            .base()
-            .get_tree()
-            .unwrap()
-            .get_first_node_in_group("CollisionHandler")
-        {
-            match handler
-                .cast::<CollisionHandler>()
-                .bind_mut()
-                .register_collider_2d(self.collider2d.clone())
-            {
-                Ok(id) => {
-                    godot_print!(
-                        "added collider: {:?} with id: {id}",
-                        self.collider2d.clone()
-                    );
-                }
-                Err(err) => {
-                    godot_error!("Some error while adding collider: {:?}", err);
-                }
-            };
-        }
+        self.register_self();
     }
 
     fn draw(&mut self) {
@@ -69,7 +50,7 @@ impl INode2D for CollisionBox {
     }
 
     fn exit_tree(&mut self) {
-        //TODO: unregister from handler
+        self.unregister_self();
     }
 }
 
@@ -85,6 +66,7 @@ impl CollisionBox {
             collision_layer: 0,
             collision_mask: 0,
             collider2d: Collider2D::new().with_size(size),
+            registered_id: None,
             base,
         })
     }
@@ -96,6 +78,7 @@ impl CollisionBox {
             collision_layer: 0,
             collision_mask: 0,
             collider2d: Collider2D::new(),
+            registered_id: None,
             base,
         })
     }
@@ -110,5 +93,54 @@ impl CollisionBox {
     pub fn set_collision_mask(&mut self, collision_mask: i32) {
         self.collision_mask = collision_mask;
         self.collider2d.collision_mask = collision_mask;
+    }
+
+    fn register_self(&mut self) {
+        if let Some(handler) = Engine::singleton().get_singleton(COLLISION_HANDLER_NODE) {
+            let mut handler = handler.cast::<CollisionHandler>();
+            let id = handler.bind().generate_unique_id();
+            match handler
+                .bind_mut()
+                .register_collider_2d(id, self.collider2d.clone())
+            {
+                Ok(_) => {
+                    godot_print!(
+                        "registered collider: {:?} with id: {id}",
+                        self.collider2d.clone()
+                    );
+                    self.registered_id = Some(id);
+                }
+                Err(err) => {
+                    godot_error!("Some error while registering Collider2d: {:?}", err);
+                }
+            };
+        } else {
+            godot_error!("No Node named: {COLLISION_HANDLER_NODE} found");
+        }
+    }
+
+    fn unregister_self(&mut self) {
+        if let Some(id) = self.registered_id {
+            if let Some(handler) = Engine::singleton().get_singleton(COLLISION_HANDLER_NODE) {
+                match handler
+                    .cast::<CollisionHandler>()
+                    .bind_mut()
+                    .unregister_collider2d(id)
+                {
+                    Ok(collider) => {
+                        godot_print!("unregistered collider: {:?} with id: {id}", collider);
+                    }
+                    Err(err) => {
+                        godot_error!(
+                            "Some error while unregistering collider: {:?} with error {:?}",
+                            self.collider2d.clone(),
+                            err
+                        );
+                    }
+                };
+            } else {
+                godot_error!("No Node named: {COLLISION_HANDLER_NODE} found");
+            }
+        }
     }
 }
