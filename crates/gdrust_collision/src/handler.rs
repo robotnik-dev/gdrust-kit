@@ -10,7 +10,7 @@ use godot::{
     prelude::{godot_api, Base, GodotClass},
 };
 
-pub const COLLISION_HANDLER_NODE: &str = "CollisionHandler";
+pub const SINGLETON_NAME: &str = "CollisionHandler";
 
 #[derive(GodotClass)]
 #[class(tool, init, base=EditorPlugin)]
@@ -24,7 +24,7 @@ struct CollisionHandlerPlugin {
 /// and cant receive them.
 impl IEditorPlugin for CollisionHandlerPlugin {
     fn enter_tree(&mut self) {
-        if let Some(handler) = Engine::singleton().get_singleton(COLLISION_HANDLER_NODE) {
+        if let Some(handler) = Engine::singleton().get_singleton(SINGLETON_NAME) {
             let mut handler = handler.cast::<CollisionHandler>();
             handler.call("enter_tree", &[]);
             // saving it internally as a Gd smart pointer to avoid getting a singleton every frame in the process functions
@@ -112,21 +112,19 @@ impl CollisionHandler {
 
     pub fn register(level: InitLevel) {
         if level == InitLevel::Scene {
-            Engine::singleton()
-                .register_singleton("CollisionHandler", &CollisionHandler::new_alloc());
+            Engine::singleton().register_singleton(SINGLETON_NAME, &CollisionHandler::new_alloc());
         }
     }
 
     pub fn unregister(level: InitLevel) {
         if level == InitLevel::Scene {
             let mut engine = Engine::singleton();
-            let collision_handler = "CollisionHandler";
 
-            if let Some(singleton) = engine.get_singleton(collision_handler) {
-                engine.unregister_singleton(collision_handler);
+            if let Some(singleton) = engine.get_singleton(SINGLETON_NAME) {
+                engine.unregister_singleton(SINGLETON_NAME);
                 singleton.free();
             } else {
-                godot_error!("Failed to get singleton: {collision_handler}");
+                godot_error!("Failed to get singleton: {SINGLETON_NAME}");
             }
         }
     }

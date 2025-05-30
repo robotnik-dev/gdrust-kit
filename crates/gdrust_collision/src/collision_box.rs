@@ -8,7 +8,7 @@ use godot::{
 
 use crate::{
     collider::{Collider2D, CollisionInfo},
-    handler::{CollisionHandler, COLLISION_HANDLER_NODE},
+    handler::{CollisionHandler, SINGLETON_NAME},
 };
 
 #[derive(GodotClass)]
@@ -96,7 +96,7 @@ impl CollisionBox {
     }
 
     fn register_self(&mut self) {
-        if let Some(handler) = Engine::singleton().get_singleton(COLLISION_HANDLER_NODE) {
+        if let Some(handler) = Engine::singleton().get_singleton(SINGLETON_NAME) {
             let mut handler = handler.cast::<CollisionHandler>();
             let id = handler.bind().generate_unique_id();
             match handler
@@ -115,13 +115,13 @@ impl CollisionBox {
                 }
             };
         } else {
-            godot_error!("No Node named: {COLLISION_HANDLER_NODE} found");
+            godot_error!("No Node named: {SINGLETON_NAME} found");
         }
     }
 
     fn unregister_self(&mut self) {
         if let Some(id) = self.registered_id {
-            if let Some(handler) = Engine::singleton().get_singleton(COLLISION_HANDLER_NODE) {
+            if let Some(handler) = Engine::singleton().get_singleton(SINGLETON_NAME) {
                 match handler
                     .cast::<CollisionHandler>()
                     .bind_mut()
@@ -139,7 +139,7 @@ impl CollisionBox {
                     }
                 };
             } else {
-                godot_error!("No Node named: {COLLISION_HANDLER_NODE} found");
+                godot_error!("No Node named: {SINGLETON_NAME} found");
             }
         }
     }
