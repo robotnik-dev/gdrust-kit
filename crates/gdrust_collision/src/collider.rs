@@ -1,4 +1,19 @@
-use godot::builtin::{Rect2, Vector2};
+use godot::{
+    builtin::{Rect2, Vector2},
+    prelude::GodotClass,
+};
+
+pub trait Collider {
+    fn intersects(&self, other: Self) -> bool;
+}
+
+#[derive(GodotClass)]
+#[class(init)]
+pub struct CollisionInfo {
+    other: Collider2D,
+    normal: Vector2,
+    impact_point: Vector2,
+}
 
 #[derive(Debug, Clone, PartialEq)]
 pub struct Collider2D {
@@ -11,7 +26,7 @@ pub struct Collider2D {
 impl Default for Collider2D {
     fn default() -> Self {
         Self {
-            active: false,
+            active: true,
             aabb: Rect2 {
                 size: Vector2 { x: 1.0, y: 1.0 },
                 ..Default::default()
@@ -64,8 +79,10 @@ impl Collider2D {
             ..self
         }
     }
+}
 
-    pub fn intersects(&self, other: Collider2D) -> bool {
-        todo!()
+impl Collider for Collider2D {
+    fn intersects(&self, other: Self) -> bool {
+        self.aabb.intersects(other.aabb)
     }
 }
