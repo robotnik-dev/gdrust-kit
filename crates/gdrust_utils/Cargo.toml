@@ -1,8 +1,8 @@
 [package]
-name = "gdrust_pathfinding"
-version = "0.1.1"
+name = "gdrust_utils"
+version = "0.1.0"
 edition = "2021"
-description = "Pathfinding tools for Rust Godot development"
+description = "Utility tools for Rust Godot development"
 license = "MIT"
 repository = "https://github.com/robotnik-dev/gdrust_kit"
 authors = ["Robotnik <robotnik.games@gmail.com>"]
