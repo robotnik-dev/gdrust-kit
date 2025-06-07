@@ -42,7 +42,7 @@ impl<T> FuzzySet<T> {
     }
 }
 
-#[derive(Debug)]
+#[derive(Debug, Clone)]
 pub struct FuzzyRule<InputType, OutputType> {
     pub condition: InputType,
     pub consequences: HashMap<OutputType, f32>,
@@ -66,7 +66,7 @@ where
     }
 }
 
-#[derive(Debug)]
+#[derive(Debug, Clone)]
 pub struct FuzzySystem<InputType, OutputType> {
     pub input_sets: Vec<FuzzySet<InputType>>,
     pub rules: Vec<FuzzyRule<InputType, OutputType>>,
