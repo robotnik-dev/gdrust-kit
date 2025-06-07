@@ -1,12 +1,12 @@
 [package]
-name = "gdrust_collision"
-version = "0.1.1"
+name = "gdrust_utils"
+version = "0.1.0"
 edition = "2021"
-description = "Collision tools for Rust Godot development"
+description = "Utility tools for Rust Godot development"
 license = "MIT"
 repository = "https://github.com/robotnik-dev/gdrust_kit"
 authors = ["Robotnik <robotnik.games@gmail.com>"]
 readme = "README.md"
 
 [dependencies]
-godot = { version = "0.2.4" }
+godot = { version = "0.3.0" }
