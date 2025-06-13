@@ -11,10 +11,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
  - <csr-id-501ca3b639db0954ee8e09ca80110e105e81802b/> Add gdrust_utils crate with fuzzy logic implementation
    - Introduced gdrust_utils crate for utility tools in Rust Godot development.
-   - Implemented fuzzy logic system with FuzzySet, FuzzyRule, and FuzzySystem structs.
-   - Updated dependencies in gdrust_pathfinding, and gdrust_player_controller to use godot version 0.3.0.
-   - Added example demonstrating fuzzy logic application for game difficulty settings.
-   - Updated Cargo.toml files to include new utils crate and its features.
+- Implemented fuzzy logic system with FuzzySet, FuzzyRule, and FuzzySystem structs.
+- Updated dependencies in gdrust_pathfinding, and gdrust_player_controller to use godot version 0.3.0.
+- Added example demonstrating fuzzy logic application for game difficulty settings.
+- Updated Cargo.toml files to include new utils crate and its features.
 
 ### Commit Statistics
 
@@ -63,8 +63,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## v0.1.0 (2025-05-18)
 
 <csr-id-303760ca5d73dfccc98e068fe6f9189c1d49f657/>
-
-
 
 ### Bug Fixes
 

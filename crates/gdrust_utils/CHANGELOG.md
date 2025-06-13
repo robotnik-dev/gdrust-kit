@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## v0.1.0 (2025-06-13)
 
+<csr-id-d476dd1593b1f5ecc9c0efd5d8782b9ffeb6a814/>
+<csr-id-9b0ad5f0fab90c1ead29b50ebf5e61cfbc69c48c/>
+
 ### Chore
 
  - <csr-id-d476dd1593b1f5ecc9c0efd5d8782b9ffeb6a814/> clean up Cargo.toml and README files
@@ -18,14 +21,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
    - Remove unused collision handling code.
    - Add tests for fuzzy logic functionality in gdrust_utils.
 
+### Chore
+
+ - <csr-id-ac630880fc0caf882f8b3c45a9976dfddf29a368/> update CHANGELOG.md
+   Document all notable changes and adhere to Semantic Versioning.
+
 ### New Features
 
  - <csr-id-501ca3b639db0954ee8e09ca80110e105e81802b/> Add gdrust_utils crate with fuzzy logic implementation
    - Introduced gdrust_utils crate for utility tools in Rust Godot development.
-   - Implemented fuzzy logic system with FuzzySet, FuzzyRule, and FuzzySystem structs.
-   - Updated dependencies in gdrust_pathfinding, and gdrust_player_controller to use godot version 0.3.0.
-   - Added example demonstrating fuzzy logic application for game difficulty settings.
-   - Updated Cargo.toml files to include new utils crate and its features.
+- Implemented fuzzy logic system with FuzzySet, FuzzyRule, and FuzzySystem structs.
+- Updated dependencies in gdrust_pathfinding, and gdrust_player_controller to use godot version 0.3.0.
+- Added example demonstrating fuzzy logic application for game difficulty settings.
+- Updated Cargo.toml files to include new utils crate and its features.
 
 ### Bug Fixes
 
@@ -35,8 +43,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 <csr-read-only-do-not-edit/>
 
- - 4 commits contributed to the release over the course of 9 calendar days.
- - 4 commits were understood as [conventional](https://www.conventionalcommits.org).
+ - 5 commits contributed to the release over the course of 9 calendar days.
+ - 5 commits were understood as [conventional](https://www.conventionalcommits.org).
  - 0 issues like '(#ID)' were seen in commit messages
 
 ### Commit Details
@@ -46,6 +54,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 <details><summary>view details</summary>
 
  * **Uncategorized**
+    - Update CHANGELOG.md ([`ac63088`](https://github.com/robotnik-dev/gdrust_kit/commit/ac630880fc0caf882f8b3c45a9976dfddf29a368))
     - Clean up Cargo.toml and README files ([`d476dd1`](https://github.com/robotnik-dev/gdrust_kit/commit/d476dd1593b1f5ecc9c0efd5d8782b9ffeb6a814))
     - Update dependencies and documentation ([`9b0ad5f`](https://github.com/robotnik-dev/gdrust_kit/commit/9b0ad5f0fab90c1ead29b50ebf5e61cfbc69c48c))
     - Add Clone derive to FuzzyRule and FuzzySystem ([`ea73c68`](https://github.com/robotnik-dev/gdrust_kit/commit/ea73c68841ddd26b57b77b023e73a7cae9678be1))
