@@ -4,11 +4,11 @@ version = 4
 
 [[package]]
 name = "gdrust_collision"
-version = "0.1.1"
+version = "0.1.2"
 
 [[package]]
 name = "gdrust_kit"
-version = "0.1.1"
+version = "0.1.2"
 dependencies = [
  "gdrust_collision",
  "gdrust_pathfinding",
@@ -18,11 +18,11 @@ dependencies = [
 
 [[package]]
 name = "gdrust_pathfinding"
-version = "0.1.1"
+version = "0.1.2"
 
 [[package]]
 name = "gdrust_player_controller"
-version = "0.1.0"
+version = "0.1.1"
 
 [[package]]
 name = "gdrust_utils"

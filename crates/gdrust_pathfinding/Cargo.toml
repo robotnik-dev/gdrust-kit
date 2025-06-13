@@ -1,6 +1,6 @@
 [package]
 name = "gdrust_pathfinding"
-version = "0.1.1"
+version = "0.1.2"
 edition = "2021"
 description = "Pathfinding tools for Rust Godot development"
 license = "MIT"
