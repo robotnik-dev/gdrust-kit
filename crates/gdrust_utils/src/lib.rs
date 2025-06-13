@@ -1,11 +1,9 @@
 /*!
-# Collision tools
-
-Utility tools for Rust Godot development
+# Utility tools
 
 ## Features
 
-- Generic Fuzzy logic
+- Simple fuzzy logic
 
 ## Usage
 

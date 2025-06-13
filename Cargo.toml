@@ -2,7 +2,7 @@
 name = "gdrust_kit"
 version = "0.1.1"
 edition = "2021"
-description = "A toolkit of Rust utilities for Godot game development"
+description = "A toolkit for Rust Godot development"
 license = "MIT"
 repository = "https://github.com/robotnik-dev/gdrust_kit"
 authors = ["Robotnik <robotnik.games@gmail.com>"]

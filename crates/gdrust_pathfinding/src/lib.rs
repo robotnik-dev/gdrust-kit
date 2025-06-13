@@ -1,15 +1,9 @@
 /*!
 # Pathfinding tools
 
-Tools for pathfinding algorithms for Godot and Rust.
-
 ## Features
 
-# TODO: Add features
-
 ## Usage
-
-# TODO: Add usage examples
 
 */
 

@@ -4,7 +4,7 @@
 [![MIT/Apache 2.0](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Docs](https://docs.rs/gdrust_player_controller/badge.svg)](https://docs.rs/gdrust_player_controller)
 
-Tools for managing player input and controls.
+Player controller tools for Rust Godot development.
 
 ## Features
 

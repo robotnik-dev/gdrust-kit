@@ -6,7 +6,6 @@
 
 Utility tools for Rust Godot development.
 
-
 ## Features
 
 ### Simple fuzzy system

@@ -1,8 +1,6 @@
 /*!
 # Collision tools
 
-Tools for simple collision detection for the godot-rust gdextension.
-
 ## Features
 
 ## Usage
