@@ -9,4 +9,4 @@ authors = ["Robotnik <robotnik.games@gmail.com>"]
 readme = "README.md"
 
 [dependencies]
-godot = { version = "0.2.4" }
+godot = { version = "0.3.1" }

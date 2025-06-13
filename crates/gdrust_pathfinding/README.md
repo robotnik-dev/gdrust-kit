@@ -6,15 +6,13 @@
 
 Pathfinding tools for Rust Godot development.
 
-## Usage
-
-```rust
-// TODO: usage example here
-```
-
 ## Features
 
-# TODO: features here
+WIP
+
+## Usage
+
+WIP
 
 ## Installation
 
@@ -23,7 +21,7 @@ Pathfinding tools for Rust Godot development.
 gdrust_kit = { version = "0.1.0", features = ["pathfinding"] }
 
 # Or standalone
-gdrust_pathfinding = "0.1.0"
+gdrust_pathfinding = "0.1.1"
 ```
 
 [Documentation](https://docs.rs/gdrust_pathfinding) | [GitHub](https://github.com/robotnik-dev/gdrust_kit)

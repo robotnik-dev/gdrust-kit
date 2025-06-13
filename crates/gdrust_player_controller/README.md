@@ -6,13 +6,11 @@
 
 Tools for managing player input and controls.
 
-## Usage
-
-```rust
-// WIP
-```
-
 ## Features
+
+WIP
+
+## Usage
 
 WIP
 
