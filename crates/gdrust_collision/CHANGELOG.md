@@ -14,7 +14,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
    - Removed unnecessary dependencies from Cargo.toml files.
    - Simplified documentation comments in lib.rs files.
  - <csr-id-9b0ad5f0fab90c1ead29b50ebf5e61cfbc69c48c/> update dependencies and documentation
-   - Bump godot version to 0.3.1 across all crates.
    - Update README files to reflect new features and usage.
    - Remove unused collision handling code.
    - Add tests for fuzzy logic functionality in gdrust_utils.
