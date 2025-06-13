@@ -5,6 +5,36 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## v0.1.2 (2025-06-13)
+
+### New Features
+
+ - <csr-id-501ca3b639db0954ee8e09ca80110e105e81802b/> Add gdrust_utils crate with fuzzy logic implementation
+   - Introduced gdrust_utils crate for utility tools in Rust Godot development.
+- Implemented fuzzy logic system with FuzzySet, FuzzyRule, and FuzzySystem structs.
+- Updated dependencies in gdrust_pathfinding, and gdrust_player_controller to use godot version 0.3.0.
+- Added example demonstrating fuzzy logic application for game difficulty settings.
+- Updated Cargo.toml files to include new utils crate and its features.
+
+### Commit Statistics
+
+<csr-read-only-do-not-edit/>
+
+ - 1 commit contributed to the release over the course of 9 calendar days.
+ - 21 days passed between releases.
+ - 1 commit was understood as [conventional](https://www.conventionalcommits.org).
+ - 0 issues like '(#ID)' were seen in commit messages
+
+### Commit Details
+
+<csr-read-only-do-not-edit/>
+
+<details><summary>view details</summary>
+
+ * **Uncategorized**
+    - Add gdrust_utils crate with fuzzy logic implementation ([`501ca3b`](https://github.com/robotnik-dev/gdrust_kit/commit/501ca3b639db0954ee8e09ca80110e105e81802b))
+</details>
+
 ## v0.1.1 (2025-05-23)
 
 ### New Features

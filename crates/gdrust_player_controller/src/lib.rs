@@ -1,3 +1,12 @@
+/*!
+# Player controller tools
+
+## Features
+
+## Usage
+
+*/
+
 /// Information about this package
 pub mod version {
     /// Returns the current version of this package

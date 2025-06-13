@@ -6,15 +6,13 @@
 
 Collision tools for Rust Godot development.
 
-## Usage
-
-```rust
-// TODO: usage example here
-```
-
 ## Features
 
-# TODO: features here
+WIP
+
+## Usage
+
+WIP
 
 ## Installation
 
@@ -23,7 +21,7 @@ Collision tools for Rust Godot development.
 gdrust_kit = { version = "0.1.0", features = ["collision"] }
 
 # Or standalone
-gdrust_collision = "0.1.0"
+gdrust_collision = "0.1.1"
 ```
 
 [Documentation](https://docs.rs/gdrust_collision) | [GitHub](https://github.com/robotnik-dev/gdrust_kit)

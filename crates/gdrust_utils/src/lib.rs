@@ -1,11 +1,15 @@
 /*!
-# Pathfinding tools
+# Utility tools
 
 ## Features
+
+- Simple fuzzy logic
 
 ## Usage
 
 */
+
+pub mod fuzzy;
 
 /// Information about this package
 pub mod version {
